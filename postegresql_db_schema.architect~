@@ -122,7 +122,7 @@
     <folder id="FOLTAB232" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB234" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX33" populated="true" UUID="676c7950-6cf2-4123-b649-cd14fb8a85bf" clustered="false" name="app_user_pk" physicalName="id" primaryKeyIndex="true" unique="false" >
+    <index id="IDX33" populated="true" UUID="676c7950-6cf2-4123-b649-cd14fb8a85bf" clustered="false" name="app_user_pk" physicalName="app_user_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC34" populated="true" UUID="ba7d79c2-a5f6-41d0-9966-310c7a48f674" ascendingOrDescending="UNSPECIFIED" column-ref="COL24" name="user_id" physicalName="user_id" />
     </index>
    </folder>
@@ -148,7 +148,7 @@
     <folder id="FOLTAB352" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB354" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX40" populated="true" UUID="b8866766-79ee-4a73-b222-a357cd4b4394" clustered="false" name="app_order_pk" physicalName="order_pk" primaryKeyIndex="true" unique="false" >
+    <index id="IDX40" populated="true" UUID="b8866766-79ee-4a73-b222-a357cd4b4394" clustered="false" name="app_order_pk" physicalName="app_order_pk" primaryKeyIndex="true" unique="false" >
      <index-column id="IDC41" populated="true" UUID="01b6f242-f287-4852-bf35-38aae4bf2089" ascendingOrDescending="UNSPECIFIED" column-ref="COL36" name="order_id" physicalName="order_id" />
     </index>
    </folder>

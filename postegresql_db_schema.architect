@@ -4,7 +4,7 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="(Target Database)" />
+   <property key="Logical" value="PlayPen Database" />
   </data-source>
  </project-data-sources>
  <source-databases>
@@ -386,10 +386,10 @@
   <table id="TAB107" populated="true" UUID="a9019a6a-695c-4663-b510-2bea7f7ebe2f" name="product_ingredient" objectType="TABLE" physicalName="product_ingredient" >
    <remarks></remarks>
    <folder id="FOLTAB1071" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL108" populated="true" UUID="fc40ea5e-3be0-48b4-b4bc-2b9a6eb6d748" autoIncrement="false" autoIncrementSequenceName="product_ingredient_ingredient_id_seq" defaultValue="" name="ingredient_id" nullable="0" physicalName="ingredient_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL108" populated="true" UUID="5f96662c-8bd9-49b2-9f56-249e51b7b24f" autoIncrement="false" autoIncrementSequenceName="product_ingredient_product_id_seq" defaultValue="" name="product_id" nullable="0" physicalName="product_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL109" populated="true" UUID="5f96662c-8bd9-49b2-9f56-249e51b7b24f" autoIncrement="false" autoIncrementSequenceName="product_ingredient_product_id_seq" defaultValue="" name="product_id" nullable="0" physicalName="product_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL109" populated="true" UUID="fc40ea5e-3be0-48b4-b4bc-2b9a6eb6d748" autoIncrement="false" autoIncrementSequenceName="product_ingredient_ingredient_id_seq" defaultValue="" name="ingredient_id" nullable="0" physicalName="ingredient_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL110" populated="true" UUID="0b4db301-5595-46f4-9100-700ddeb5b3a3" autoIncrement="false" autoIncrementSequenceName="product_ingredient_quantity_seq" defaultValue="" name="quantity" nullable="0" physicalName="quantity" precision="5" referenceCount="1" scale="2" sourceDataTypeName="UserDefinedSQLType" type="3" userDefinedTypeUUID="cc1304ea-628a-4fc5-a84a-06ba14759152" >
@@ -402,8 +402,8 @@
     </folder>
     <folder id="FOLTAB1074" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX111" populated="true" UUID="260ee58b-717b-476b-a4c2-47b594fcc7fe" clustered="false" name="product_ingredient_pk" physicalName="product_ingredient_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC112" populated="true" UUID="dae2568c-7212-4138-8962-64aa0cbbc07c" ascendingOrDescending="UNSPECIFIED" column-ref="COL108" name="ingredient_id" physicalName="ingredient_id" />
-     <index-column id="IDC113" populated="true" UUID="1b0b109f-1620-4e0e-a41a-3d9880ea9843" ascendingOrDescending="UNSPECIFIED" column-ref="COL109" name="product_id" physicalName="product_id" />
+     <index-column id="IDC112" populated="true" UUID="40414a2c-8662-4dd7-8e9f-4863c6647a15" ascendingOrDescending="UNSPECIFIED" column-ref="COL108" name="product_id" physicalName="product_id" />
+     <index-column id="IDC113" populated="true" UUID="dae2568c-7212-4138-8962-64aa0cbbc07c" ascendingOrDescending="UNSPECIFIED" column-ref="COL109" name="ingredient_id" physicalName="ingredient_id" />
     </index>
    </folder>
   </table>
@@ -482,7 +482,7 @@
     <column-mapping id="CMP143" populated="true" UUID="837ba8ea-16a8-4d13-8fb7-20a3c2bb809d" fk-column-ref="COL95" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
    </relationship>
    <relationship id="REL144" populated="true" UUID="7f567f6f-9f85-40ec-b6c4-cbe823eb3aee" deferrability="7" deleteRule="3" fk-table-ref="TAB107" fkCardinality="7" identifying="true" name="product_product_ingredient_fk" physicalName="product_product_ingredient_fk" pk-table-ref="TAB42" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP145" populated="true" UUID="a7499746-f4e4-4faf-9274-0bad4be6f30b" fk-column-ref="COL109" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
+    <column-mapping id="CMP145" populated="true" UUID="a7499746-f4e4-4faf-9274-0bad4be6f30b" fk-column-ref="COL108" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
    </relationship>
    <relationship id="REL146" populated="true" UUID="ef856185-dfb3-4422-b893-2815027c98c2" deferrability="7" deleteRule="3" fk-table-ref="TAB101" fkCardinality="7" identifying="true" name="product_product_category_fk" physicalName="product_product_category_fk" pk-table-ref="TAB42" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP147" populated="true" UUID="56034f67-b2cd-4e45-97ca-3dab4151b1cc" fk-column-ref="COL102" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL43" />
@@ -500,7 +500,7 @@
     <column-mapping id="CMP155" populated="true" UUID="7a6c6911-c55d-494f-b84f-4abb93e4a8cf" fk-column-ref="COL32" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL60" />
    </relationship>
    <relationship id="REL156" populated="true" UUID="aa5f26fe-23b5-4e35-add2-dfb40ac5ccf9" deferrability="7" deleteRule="3" fk-table-ref="TAB107" fkCardinality="7" identifying="true" name="ingredient_product_ingredient_fk" physicalName="ingredient_product_ingredient_fk" pk-table-ref="TAB66" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP157" populated="true" UUID="b00111e7-e5b4-47b9-ad82-de14791b5360" fk-column-ref="COL108" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL67" />
+    <column-mapping id="CMP157" populated="true" UUID="b00111e7-e5b4-47b9-ad82-de14791b5360" fk-column-ref="COL109" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL67" />
    </relationship>
    <relationship id="REL158" populated="true" UUID="953c0f68-634f-47a9-9ece-ed6356cbec19" deferrability="7" deleteRule="3" fk-table-ref="TAB88" fkCardinality="6" identifying="true" name="ingredient_supplier_ingredient_fk" physicalName="ingredient_supplier_ingredient_fk" pk-table-ref="TAB66" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP159" populated="true" UUID="094d391e-42c7-43b6-ac46-06bce27c3133" fk-column-ref="COL90" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL67" />
@@ -522,7 +522,7 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
