@@ -22,9 +22,9 @@ VALUES
     (2, 'M', 'Bowser', 'Bad', '0000000000', 'bowser@mario_world.fr', '24c15bdcf0144615360f6154593dd73b54d5d159b92dfeab2faddcb4ad06d74b', 1),
     (3, 'M', 'Mario', 'Mario', '0000000000', 'mario@mario_world.fr', '59195c6c541c8307f1da2d1e768d6f2280c984df217ad5f4c64c3542b04111a4', 1),
     (4, 'M', 'Luigi', 'Luigi', '0000000000', 'luigi@mario_world.fr', '5839ecdfd43bc7467f77cba4a40ea64c8ee5f986f61cf16a0e024ed2225891a4', 1),
-    (5, 'M', 'Toad', 'Toad', '0000000000', 'toad@toad_world.fr', '1b34942add2c85bbca6a87ba114b9ffb1c92f1a6fde8bec4ebd98a4dd18d74a7', 1),
-    (5, 'M', 'Yoshi', 'Yoshi', '0000000000', 'yoshi@yoshi_world.fr', 'a2d7cd5aba4611fd646db71593d23e0d9758b24a82cc759a2ae0f6ef2c8e1724', 1),
-    (5, 'F', 'Zelda', 'Princess', '0000000000', 'zelda@link_world.fr', 'f4c7079ad36ede23223bde716d102b1891a234dcc451cca28d3dbff07abe826b', 1);
+    (5, 'M', 'Toad', 'Toad', '0000000000', 'toad@toad_world.fr', '1b34942add2c85bbca6a87ba114b9ffb1c92f1a6fde8bec4ebd98a4dd18d74a7', NULL),
+    (5, 'M', 'Yoshi', 'Yoshi', '0000000000', 'yoshi@yoshi_world.fr', 'a2d7cd5aba4611fd646db71593d23e0d9758b24a82cc759a2ae0f6ef2c8e1724', NULL),
+    (5, 'F', 'Zelda', 'Princess', '0000000000', 'zelda@link_world.fr', 'f4c7079ad36ede23223bde716d102b1891a234dcc451cca28d3dbff07abe826b', NULL);
 
 
 INSERT INTO public.product
@@ -117,13 +117,22 @@ VALUES
     (1, 5, 125, '2018-01-26 12:30:50'),
     (1, 6, 40, '2018-01-27 12:40:37'),
     (1, 7, 100, '2018-01-26 12:30:50'),
-    (1, 8, 50, '2018-01-27 12:40:37');
+    (1, 8, 50, '2018-01-27 12:40:37'),
+    (2, 1, 100, '2018-01-26 12:30:50'),
+    (2, 2, 500, '2018-01-27 12:40:37'),
+    (2, 3, 200, '2018-01-26 12:30:50'),
+    (2, 4, 200, '2018-01-27 12:40:37'),
+    (2, 5, 125, '2018-01-26 12:30:50'),
+    (2, 6, 40, '2018-01-27 12:40:37'),
+    (2, 7, 100, '2018-01-26 12:30:50'),
+    (2, 8, 50, '2018-01-27 12:40:37');
 
 
 INSERT INTO public.address
     (user_id, supplier_id, restaurant_id, title, street_number, street_name, postal_code, town, latitude, longitude)
 VALUES
     (NULL, NULL, 1, NULL, '13 bis', 'place denfert rochereau', '75014', 'Paris', NULL, NULL),
+    (NULL, NULL, 2, NULL, '15 ter', 'place de la bastille', '75011', 'Paris', NULL, NULL),
     (NULL, 1, NULL, NULL, '1', 'rue de la tour', '94152', 'Rungis', NULL, NULL),
     (5, NULL, NULL, 'Ma maison', '600', 'route du Noiray', '73290', 'La Motte-Servolex', NULL, NULL),
     (6, NULL, NULL, 'La maison de maman', '55', 'rue des archives', '75003', 'Paris', NULL, NULL);
@@ -133,7 +142,7 @@ INSERT INTO public.app_order
     (user_id, restaurant_id, address_id)
 VALUES
     (5, 1, 3),
-    (6, 1, 4),
+    (6, 2, 4),
     (6, 1, 4);
 
 
@@ -148,11 +157,11 @@ VALUES
 
 
 INSERT INTO public.transaction
-    (transaction_id, order_id, transaction_datetime, refund_cause)
+    (transaction_id, order_id, stripe_token, transaction_datetime, refund_cause)
 VALUES
-    (1, 1, '2018-01-27 12:40:37', NULL),
-    (2, 2, '2018-01-27 12:45:18', NULL),
-    (3, 3, '2018-01-26 12:45:18', NULL);
+    (1, 1, '4c78987eqsdqf1548', '2018-01-27 12:40:37', NULL),
+    (2, 2, '54465qsd56qezq564', '2018-01-27 12:45:18', NULL),
+    (3, 3, '2545qs6r74q56e788', '2018-01-26 12:45:18', NULL);
 
 
 INSERT INTO public.order_status

@@ -10,6 +10,10 @@ CREATE TABLE public.role (
 
 ALTER SEQUENCE public.role_role_id_seq OWNED BY public.role.role_id;
 
+CREATE UNIQUE INDEX role_idx
+ ON public.role
+ ( name );
+
 CREATE SEQUENCE public.category_category_id_seq;
 
 CREATE TABLE public.category (
@@ -101,7 +105,7 @@ CREATE TABLE public.app_user (
                 phone_number VARCHAR(16) NOT NULL,
                 email VARCHAR(128) NOT NULL,
                 password_sha256 VARCHAR NOT NULL,
-                restaurant_id INTEGER NOT NULL,
+                restaurant_id INTEGER,
                 CONSTRAINT app_user_pk PRIMARY KEY (user_id)
 );
 
@@ -165,6 +169,7 @@ ALTER SEQUENCE public.app_order_order_id_seq OWNED BY public.app_order.order_id;
 CREATE TABLE public.transaction (
                 transaction_id INTEGER NOT NULL,
                 order_id INTEGER NOT NULL,
+                stripe_token VARCHAR NOT NULL,
                 transaction_datetime TIMESTAMP NOT NULL,
                 refund_cause VARCHAR(512),
                 CONSTRAINT transaction_pk PRIMARY KEY (transaction_id)
